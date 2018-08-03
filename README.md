@@ -2,7 +2,7 @@
 
 A small program written in Python 3 to guide users through scrcpy
 
-##Requirements
+## Requirements
 
 A Linux or OS X system (Untested on OS X but in theory should work)
 
@@ -10,7 +10,7 @@ scrcpy installed in a way where it can be access from a terminal without specify
 
 (scrcpy can be found at https://github.com/Genymobile/scrcpy )
 
-##Using
+## Using
 
 Simply open a terminal, navigate to the directory containing main.py, and run
 ```
