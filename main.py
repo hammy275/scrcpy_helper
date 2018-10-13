@@ -43,13 +43,11 @@ def get_input(question, list_of_answers, default): #Accepts a question and a lis
     answer = input(question) #Asks the user the question
     answer = answer.lower() #Makes the answer lowercase
     if answer == "":
-        print("")
         return default
     elif (answer not in list_of_answers) and (list_of_answers != []): #If the answer isn't in the list and the list isn't blank
         print("Invalid response!") #Declare response invalid
         get_input(question, list_of_answers) #Ask again
     else:
-        print("") #Blank line for readability
         return answer #Return supplied answer
     
 def AdditionalSettings(usb_or_wifi): #Possibly may re-work this code to use the function get_input
@@ -59,19 +57,16 @@ def AdditionalSettings(usb_or_wifi): #Possibly may re-work this code to use the 
         bitrate = "8M"
     cmd_line_param.append("-b")
     cmd_line_param.append(bitrate)
-    print("")
     max_size = input("Specify max screen resolution (only one number, see scrcpy documentation if you're confused) [0]: ") #Specify resolution
     if max_size == "":
         max_size = "0"
     cmd_line_param.append("-m")
     cmd_line_param.append(max_size)
-    print("")
     if usb_or_wifi == "u":
         serial = input("Enter serial number of device (required if multiple devices connected!): ") #Specify serial number if multiple devices are connected to the computer (might break if connecting via wifi)
         if serial != "":
             cmd_line_param.append("-s")
             cmd_line_param.append(serial)
-            print("")
     touches = get_input("Show physical touches? [y/N]: ", ["y", "n"], "n")
     if touches == "y": #Show physical touches?
         cmd_line_param.append("-t")
