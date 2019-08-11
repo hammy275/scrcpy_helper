@@ -1,6 +1,6 @@
 # scrcpy_helper
 
-A small program written in Python 3 to guide users through scrcpy (terminal only but GUI support is planned!)
+A small program written in Python 3 to guide users through scrcpy (terminal version is this repository, a GUI version can be found [here](https://github.com/hammy3502/scrcpy-gui)
 
 ## Requirements
 
